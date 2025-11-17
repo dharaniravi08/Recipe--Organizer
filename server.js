@@ -3,10 +3,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const app = express();
+const cors = require("cors");
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
