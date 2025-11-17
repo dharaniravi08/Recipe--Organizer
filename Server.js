@@ -29,9 +29,9 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/recipe";
 const connectDb = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI); // no extra options needed
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
   } catch (err) {
-    console.error("❌ MongoDB Connection Error:", err.message);
+    console.error(" MongoDB Connection Error:", err.message);
     process.exit(1);
   }
 };
@@ -114,3 +114,4 @@ connectDb().then(() => {
     console.log(`Server running on port ${port}`);
   });
 });
+
